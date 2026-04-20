@@ -1,0 +1,567 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --MARBLE: #f8f8f0;
+  --GOLDEN: #b8860b;
+  --DARK: #333;
+  --DEEPSLATE: #0f172a;
+}
+
+/* homepage */
+.HomePageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+
+.HomeHeader {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(
+        to right,
+        #0a0a0a,
+        #111111
+    );
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+.HomeNav {
+    .HomeNav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 48px;
+}
+}
+
+.HomeNav button {
+    padding: 8px 18px;
+    margin-left: 12px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    border: none;
+}
+
+.LoginBtn {
+    background: transparent;
+    color: #d1d5db;
+
+    padding: 8px 18px;
+
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.LoginBtn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.SignupBtn {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #ffffff;
+
+    padding: 8px 20px;
+    margin-left: 14px;
+
+    border-radius: 8px;
+    border: none;
+
+    font-weight: 500;
+    cursor: pointer;
+
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+    transition: all 0.2s ease;
+}
+
+.SignupBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
+}
+
+
+.HomeBody {
+    min-height: calc(100vh - 70px);
+    width: 100%;
+    background: radial-gradient(
+        circle at top,
+        #111111,
+        #050505 70%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.HomeContent {
+    width: 90%;
+    max-width: 1200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 80px 0;
+}
+
+.HeroSection {
+    text-align: center;
+    max-width: 700px;
+    justify-content: center;
+}
+
+.HeroSection h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+
+    color: #f9fafb;
+    margin-bottom: 20px;
+
+    line-height: 1.2;
+}
+
+.HeroSection p {
+    font-size: 1.05rem;
+    color: #9ca3af;
+
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.HeroActions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.PrimaryAction {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: none;
+
+    cursor: pointer;
+    font-weight: 500;
+
+    transition: all 0.2s ease;
+}
+
+.PrimaryAction:hover {
+    transform: translateY(-1px);
+}
+
+.SecondaryAction {
+    background: transparent;
+    color: #d1d5db;
+
+    padding: 10px 20px;
+    border-radius: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    cursor: pointer;
+}
+
+.SecondaryAction:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+/* login and signup pages */
+.LoginModal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2000;
+}
+
+.LoginCard {
+    width: 360px;
+    padding: 32px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.LoginCard form {
+    display: flex;
+    flex-direction: column;
+}
+
+.LoginCard h2 {
+    color: #f9fafb;
+    margin-bottom: 24px;
+
+    font-weight: 600;
+    text-align: center;
+}
+
+.LoginCard label {
+    font-size: 0.85rem;
+    color: #9ca3af;
+
+    margin-bottom: 6px;
+}
+
+.LoginCard input {
+    padding: 10px 12px;
+    margin-bottom: 18px;
+
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(255, 255, 255, 0.03);
+    color: #ffffff;
+
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.LoginCard input:focus {
+    border: 1px solid rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.LoginCard button {
+    margin-top: 10px;
+    padding: 10px;
+
+    border-radius: 8px;
+    border: none;
+
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.LoginCard button:hover {
+    transform: translateY(-1px);
+}
+
+.LoginCard {
+  
+  animation: scaleFade 0.25s ease;
+}
+
+@keyframes scaleFade {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.LoginCard h1 {
+  text-align: center;
+  color: white;
+  font-size: 1.4rem;
+}
+
+#passPara,#confPassPara,#OrgCheck {
+    font-size: 0.8rem;
+    color: red
+}
+
+/* welcome popup page */
+.WelcomeModal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2000;
+}
+
+.WelcomeCard {
+    position: relative;
+
+    width: 400px;
+    padding: 36px 28px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+
+    text-align: center;
+
+    animation: fadeInUp 0.25s ease;
+}
+
+.CloseBtn {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+
+    background: transparent;
+    border: none;
+
+    color: #9ca3af;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.CloseBtn:hover {
+    color: #ffffff;
+}
+
+.WelcomeIcon {
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto 16px;
+
+    border-radius: 50%;
+
+    background: rgba(59, 130, 246, 0.15);
+    color: #3b82f6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.WelcomeCard h1 {
+    color: #f9fafb;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.WelcomeCard p {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    line-height: 1.5;
+
+    margin-bottom: 24px;
+}
+
+.PrimaryBtn {
+    width: 100%;
+    padding: 11px;
+
+    border-radius: 8px;
+    border: none;
+
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.PrimaryBtn:hover {
+    transform: translateY(-1px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Error Page */
+.ErrorModal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2000;
+}
+
+.ErrorCard {
+    position: relative;
+
+    width: 400px;
+    padding: 36px 28px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+
+    text-align: center;
+
+    animation: errorIn 0.25s ease;
+}
+
+.CloseBtn {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+
+    background: transparent;
+    border: none;
+
+    color: #9ca3af;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+}
+
+.CloseBtn:hover {
+    color: #ffffff;
+}
+
+.ErrorIcon {
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto 16px;
+
+    border-radius: 50%;
+
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.ErrorCard h1 {
+    color: #f9fafb;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.ErrorCard p {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    line-height: 1.5;
+
+    margin-bottom: 24px;
+}
+
+.ErrorActions {
+    display: flex;
+    gap: 12px;
+}
+
+.PrimaryBtn {
+    flex: 1;
+
+    padding: 10px;
+
+    border-radius: 8px;
+    border: none;
+
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.PrimaryBtn:hover {
+    transform: translateY(-1px);
+}
+
+.SecondaryBtn {
+    flex: 1;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    background: transparent;
+    color: #d1d5db;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    cursor: pointer;
+}
+
+.SecondaryBtn:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes errorIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

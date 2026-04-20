@@ -1,0 +1,17 @@
+Title:- Document Management System using PostgreSQL and Python.
+Tech Stack:- 
+1. Backend: fastApi, sqlModel, celery, redis
+2. Database: PostgreSQL, Alembic, MINIO
+3. Frontend: React
+
+Use case:-
+
+1. If an organisation is using the application, an admin creates the account for the organisation and is directly promoted to admin. They can add or create profiles for their employees.
+2. The user can upload files to designated slot for uploading files. The files are uploaded by clicking on "check-in".
+3. The user can edit a file by clicking on check-out. Nobody else can edit the files while it is in check-out state. They can check in the modified file which would increment it's version number.
+4. The user can access previous versions of the document by simply clicking on the version of the document they want to see or edit. They can restore this version by clicking "check in".
+5. The admin of the organisation can audit the changes made on the document.
+6. Users can see a small preview of the checked-in document.
+7. Users can delete the docs
+8. Users can restore deleted docs within a fixed interval of time.
+  

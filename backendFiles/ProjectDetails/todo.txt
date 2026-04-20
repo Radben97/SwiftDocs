@@ -1,0 +1,6 @@
+1. Create classes for each table decided in schema_and_tables1.txt (completed)
+2. Initialize alembic with postgresql and check the database
+3. Create various functional services for the application
+4. Create Fastapi routes
+5. Create a website to host our service
+6. Test the application

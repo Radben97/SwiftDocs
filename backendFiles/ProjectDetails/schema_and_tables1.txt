@@ -1,0 +1,62 @@
+PostgreSQL tables used for the project.
+
+1. Public Schema
+
+1.1 Tenant
+	id
+	name
+	subdomain
+	schema_name
+	created_at
+
+1.2 Tenant_auth
+	tenant_id (foreign key to id in Tenant table)
+	email_id 
+	is_active
+
+2. Tenant private schema
+
+A. User
+
+A.1 User table
+	id
+	full_name
+	email_id (foreign key to email_id in Tenant_auth table)
+	role
+	hashed_pwd
+
+B. Document
+
+B.1 document identity table
+	id
+	title
+	owner_id (foreign key to id in User table)
+	is_locked
+	locked_by_id
+	current_version_id 
+
+B.2 document version table
+	id (foreign key to current_version_id in document identity table )
+	document_id (foreign key to id in document identity table )
+	version_number
+	s3_path
+	file_hash
+	change_note
+	size_bytes
+	created_at
+
+C. Audit
+
+C.1 audit table
+	id
+	user_id (foreign key to id in User table)
+	action
+	doc_id (foreign key to id in document identity table)
+	ip_address
+	timestamp
+
+C.2 trash table
+	id
+	document_id (foreign key to id in document identity table)
+	deleted_by_id (foreign key to id in User table)
+	
