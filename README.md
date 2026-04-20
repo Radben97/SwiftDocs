@@ -1,7 +1,7 @@
 # 🚀 SwiftDocs (WIP)
 **A Multi-tenant Document Management System (DMS)**
 
-SwiftDocs is a high-performance, scalable document management platform designed to handle secure file storage and organization across multiple isolated tenants. 
+SwiftDocs is a document management platform designed to handle secure file storage and organization across multiple isolated tenants. 
 
 > **Note:** This project is currently a **Work In Progress**. Core architecture for multi-tenancy and database migrations is implemented, with storage currently handled via a local SeaweedFS instance.
 
@@ -40,8 +40,8 @@ SwiftDocs/
 ├── backendFiles/
 │   ├── migrations-public/   # Shared system migrations
 │   ├── migrations-tenant/   # Individual tenant migrations
-│   ├── src/                 # FastAPI routes, schemas, and models
+│   ├── src/                 
 │   └── alembic.ini
 ├── frontendFiles/           # React + TypeScript source
 ├── ProjectDetails/          # Architecture diagrams (.drawio)
-└── .env.example             # Template for DB/S3/SeaweedFS credentials
+└── .env.example             
